@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resistor 3D Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar info -->
+      <aside class="info">
+        <h2>Resistor</h2>
+        <button class="button-toggle" onclick="toggleInfo()">Info</button>
+        <div id="detailBox">
+          <p>
+            <strong>Resistor</strong> adalah komponen elektronik pasif yang
+            berfungsi untuk membatasi arus listrik.
+          </p>
+          <p>
+            Warna pada badan resistor menunjukkan nilai resistansi dalam satuan
+            Ohm (Ω).
+          </p>
+          <p>Contoh: Merah - Jingga - Biru - Emas</p>
+        </div>
+        <button class="button-toggle" onclick="launchAR()">Aktifkan AR</button>
+      </aside>
+
+      <!-- Model 3D -->
+      <main class="viewer">
+        <model-viewer
+          src="/assets/models/resistor.glb"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          auto-rotate
+          shadow-intensity="1"
+          alt="Resistor 3D model"
+          exposure="1"
+          style="width: 100%; height: 100%"
+        >
+        </model-viewer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
